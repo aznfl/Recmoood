@@ -9,4 +9,17 @@
 <body>
     <h5>Recmood</h5>
 </body>
+<script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "03465e70-6f21-4968-9ef1-1c775dc35e83", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "655a5e0b-9e27-4f8b-acff-7fde4030ec44", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+    });
+</script>
 </html>
